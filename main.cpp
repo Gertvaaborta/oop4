@@ -1,6 +1,12 @@
 #include <iostream>
-#include "array.h"
-#include "factory.h"
+#include <memory>
+#include <figures/point.h>
+#include <figures/figure.h>
+#include <figures/triangle.h>
+#include <figures/square.h>
+#include <figures/rectangle.h>
+#include <figures/array.h>
+#include <figures/factory.h>
 
 int main() {
     Array<std::shared_ptr<Figure<double>>> figures;
@@ -53,17 +59,6 @@ int main() {
                 std::cout << "Invalid choice.\n";
         }
     } while (choice != 0);
-    
-    // Пример работы с Array для разных типов
-    std::cout << "\n=== Testing Array with different types ===\n";
-    
-    Array<std::shared_ptr<Figure<int>>> intFigures;
-    intFigures.push_back(std::make_shared<Triangle<int>>(Point<int>(0, 0), Point<int>(1, 0), Point<int>(0, 1)));
-    std::cout << "Array<Figure<int>*> test completed.\n";
-    
-    Array<Square<double>> squares;
-    squares.push_back(Square<double>(Point<double>(0, 0), 5.0));
-    std::cout << "Array<Square<double>> test completed.\n";
     
     return 0;
 }
