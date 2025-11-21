@@ -10,6 +10,41 @@ void Array<T>::resize(size_t newCapacity) {
     capacity = newCapacity;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 template<typename T>
 Array<T>::Array() : data(nullptr), capacity(0), size(0) {}
 
@@ -68,6 +103,40 @@ double Array<T>::totalArea() const {
     }
     return total;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 template<typename T>
 void Array<T>::printAllFigures() const {
