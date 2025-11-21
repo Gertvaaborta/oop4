@@ -7,6 +7,27 @@ double Rectangle<T>::area() const {
     return width * height;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 template<Scalar T>
 Point<T> Rectangle<T>::geometricCenter() const {
     return *center;
@@ -23,6 +44,45 @@ void Rectangle<T>::printVertices() const {
     
     std::cout << "Rectangle vertices: " << p1 << ", " << p2 << ", " << p3 << ", " << p4 << std::endl;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 template<Scalar T>
 Rectangle<T>::Rectangle(const Rectangle& other) 
