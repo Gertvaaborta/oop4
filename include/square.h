@@ -3,6 +3,30 @@
 
 #include "figure.h"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 template<Scalar T>
 class Square : public Figure<T> {
 private:
@@ -13,10 +37,49 @@ public:
     double area() const override;
     Point<T> geometricCenter() const override;
     void printVertices() const override;
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     Square(const Square& other);
     Square& operator=(const Square& other);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #include "square.cpp"
 
