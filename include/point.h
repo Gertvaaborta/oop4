@@ -13,23 +13,30 @@ class Point {
 private:
     T x, y;
 public:
-    Point(T x = 0, T y = 0);
+    Point(T x = 0, T y = 0) : x(x), y(y) {}
     
-    T getX() const;
-    T getY() const;
+    T getX() const { return x; }
+    T getY() const { return y; }
     
-    void setX(T x);
-    void setY(T y);
+    void setX(T x) { this->x = x; }
+    void setY(T y) { this->y = y; }
     
-    double distanceTo(const Point& other) const;
+    double distanceTo(const Point& other) const {
+        return std::sqrt(std::pow(x - other.x, 2) + std::pow(y - other.y, 2));
+    }
     
-    Point operator+(const Point& other) const;
-    Point operator/(T divisor) const;
+    Point operator+(const Point& other) const {
+        return Point(x + other.x, y + other.y);
+    }
     
-    template<Scalar U>
-    friend std::ostream& operator<<(std::ostream& os, const Point<U>& point);
+    Point operator/(T divisor) const {
+        return Point(x / divisor, y / divisor);
+    }
+    
+    friend std::ostream& operator<<(std::ostream& os, const Point& point) {
+        os << "(" << point.x << ", " << point.y << ")";
+        return os;
+    }
 };
-
-#include "point.cpp"
 
 #endif
