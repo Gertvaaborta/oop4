@@ -14,7 +14,47 @@ private:
     T x, y;
 public:
     Point(T x = 0, T y = 0) : x(x), y(y) {}
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     T getX() const { return x; }
     T getY() const { return y; }
     
@@ -32,7 +72,29 @@ public:
     Point operator/(T divisor) const {
         return Point(x / divisor, y / divisor);
     }
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     friend std::ostream& operator<<(std::ostream& os, const Point& point) {
         os << "(" << point.x << ", " << point.y << ")";
         return os;
