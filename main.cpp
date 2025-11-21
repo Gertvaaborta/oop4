@@ -12,14 +12,8 @@ int main() {
     
     int choice;
     do {
-        std::cout << "\nMenu:\n";
-        std::cout << "1. Add Triangle\n";
-        std::cout << "2. Add Square\n";
-        std::cout << "3. Add Rectangle\n";
-        std::cout << "4. Print all figures\n";
-        std::cout << "5. Calculate total area\n";
-        std::cout << "6. Delete figure by index\n";
-        std::cout << "0. Exit\n";
+        std::cout << "\nMenu:\n";std::cout << "1. Add Triangle\n";std::cout << "2. Add Square\n";std::cout << "3. Add Rectangle\n";std::cout << "4. Print all figures\n";std::cout << "5. Calculate total area\n";
+        std::cout << "6. Delete figure by index\n";std::cout << "0. Exit\n";
         std::cout << "Enter your choice: ";
         std::cin >> choice;
         
