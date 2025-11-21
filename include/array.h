@@ -1,5 +1,64 @@
 #ifndef ARRAY_H
 #define ARRAY_H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #include <memory>
 #include <iostream>
 #include "figure.h"
