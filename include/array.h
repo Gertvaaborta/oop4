@@ -1,24 +1,19 @@
 #ifndef ARRAY_H
 #define ARRAY_H
-
 #include <memory>
 #include <iostream>
 #include "figure.h"
-
 template<typename T>
 class Array {
 private:
     std::shared_ptr<T[]> data;
     size_t capacity;
     size_t size;
-    
     void resize(size_t newCapacity) {
         std::shared_ptr<T[]> newData(new T[newCapacity]);
-        
         for (size_t i = 0; i < size; ++i) {
             newData[i] = std::move(data[i]);
         }
-        
         data = std::move(newData);
         capacity = newCapacity;
     }
@@ -36,14 +31,12 @@ public:
         }
         data[size++] = value;
     }
-    
     void push_back(T&& value) {
         if (size >= capacity) {
             resize(capacity == 0 ? 1 : capacity * 2);
         }
         data[size++] = std::move(value);
     }
-    
     void erase(size_t index) {
         if (index >= size) return;
         
@@ -52,18 +45,14 @@ public:
         }
         --size;
     }
-    
     T& operator[](size_t index) {
         return data[index];
     }
-    
     const T& operator[](size_t index) const {
         return data[index];
     }
-    
     size_t getSize() const { return size; }
     size_t getCapacity() const { return capacity; }
-    
     double totalArea() const {
         double total = 0;
         for (size_t i = 0; i < size; ++i) {
@@ -71,7 +60,6 @@ public:
         }
         return total;
     }
-    
     void printAllFigures() const {
         for (size_t i = 0; i < size; ++i) {
             std::cout << "Figure " << i + 1 << ":" << std::endl;
