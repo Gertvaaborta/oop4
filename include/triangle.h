@@ -3,6 +3,38 @@
 
 #include "figure.h"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 template<Scalar T>
 class Triangle : public Figure<T> {
 private:
@@ -28,7 +60,70 @@ public:
     void printVertices() const override {
         std::cout << "Triangle vertices: " << *p1 << ", " << *p2 << ", " << *p3 << std::endl;
     }
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     Triangle(const Triangle& other) 
         : p1(std::make_unique<Point<T>>(*other.p1))
         , p2(std::make_unique<Point<T>>(*other.p2))
@@ -43,5 +138,22 @@ public:
         return *this;
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #endif
